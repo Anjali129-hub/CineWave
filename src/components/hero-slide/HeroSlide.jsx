@@ -95,21 +95,24 @@ const HeroSlide = () => {
       </Swiper>
 
       {/* Trailer Modal */}
-      <Modal active={!!activeTrailer} onClose={closeTrailer} id="hero-trailer-modal">
-        <ModalContent onClose={closeTrailer}>
-          {activeTrailer === "NO_TRAILER" ? (
-            <p>No trailer available</p>
-          ) : (
-            <iframe
-              width="100%"
-              height="500px"
-              title="trailer"
-              src={activeTrailer || ""}
-              allowFullScreen
-            ></iframe>
-          )}
-        </ModalContent>
-      </Modal>
+<Modal active={!!activeTrailer} onClose={closeTrailer} id="hero-trailer-modal">
+  <ModalContent onClose={closeTrailer}>
+    {activeTrailer === "NO_TRAILER" ? (
+      <p>No trailer available</p>
+    ) : (
+      activeTrailer && (
+        <iframe
+          width="100%"
+          height="500px"
+          title="trailer"
+          src={activeTrailer}
+          allowFullScreen
+        ></iframe>
+      )
+    )}
+  </ModalContent>
+</Modal>
+
     </div>
   );
 };

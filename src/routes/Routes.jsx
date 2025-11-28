@@ -5,22 +5,29 @@ import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
 import Detail from "../pages/detail/Detail";
 
+import * as Config from "../constants/Config";
+
 const AppRoutes = () => {
   return (
     <Routes>
-      
-      {/* Home */}
+      {/* Home page at root "/" */}
       <Route path="/" element={<Home />} />
 
-      {/* Catalog */}
-      <Route path="/:category" element={<Catalog />} />
-
-      {/* Search */}
-      <Route path="/:category/search/:keyword" element={<Catalog />} />
-
-      {/* Detail */}
-      <Route path="/:category/:id" element={<Detail />} />
-
+      {/* Search page */}
+      <Route
+        path={`/${Config.HOME_PAGE}/:category/search/:keyword`}
+        element={<Catalog />}
+      />
+      {/* Detail page */}
+      <Route
+        path={`/${Config.HOME_PAGE}/:category/:id`}
+        element={<Detail />}
+      />
+      {/* Catalog page */}
+      <Route
+        path={`/${Config.HOME_PAGE}/:category`}
+        element={<Catalog />}
+      />
     </Routes>
   );
 };
