@@ -10,7 +10,7 @@ import * as Config from "../constants/Config";
 const AppRoutes = () => {
   return (
     <Routes>
-      {/* Home page at root "/" */}
+      {/* Home page "/" */}
       <Route path="/" element={<Home />} />
 
       {/* Search page */}

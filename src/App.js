@@ -10,14 +10,14 @@ import { BrowserRouter } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-import AppRoutes from "./routes/Routes"; // component, not array
+import AppRoutes from "./routes/Routes"; 
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
 
-      <AppRoutes /> {/* render the routes component directly */}
+      <AppRoutes /> 
 
       <Footer />
     </BrowserRouter>

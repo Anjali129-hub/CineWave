@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import "./movie-grid.scss";
 
-import { useNavigate, useParams } from "react-router-dom"; // updated
+import { useNavigate, useParams } from "react-router-dom"; 
 
 import MovieCard from "./../movie-card/MovieCard";
 
@@ -88,7 +88,7 @@ const MovieGrid = (props) => {
 };
 
 const MovieSearch = (props) => {
-  const navigate = useNavigate(); // updated
+  const navigate = useNavigate(); 
   const [keyword, setKeyword] = useState(props.keyword || "");
 
   const goToSearch = useCallback(() => {
